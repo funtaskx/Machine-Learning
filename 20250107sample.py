@@ -27,3 +27,17 @@ y_pred = svm_model.predict(X_test)
 # estimate model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"SVM Accuracy: {accuracy:.2f}")
+
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+
+# train SVM model
+svm_model = SVC(kernel='linear')
+svm_model.fit(X_train, y_train)
+
+# predict
+y_pred = svm_model.predict(X_test)
+
+# estimate model
+accuracy = accuracy_score(y_test, y_pred)
+print(f"SVM Accuracy: {accuracy:.2f}")
